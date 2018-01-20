@@ -5,5 +5,5 @@ public enum InstrumentFamily {
     STRINGS,
     KEYBOARD,
     BRASS,
-    WOODWIND;
+    WOODWIND
 }

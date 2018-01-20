@@ -1,10 +1,13 @@
 
 
+import Instruments.EnumColor;
+import Instruments.EnumMaterial;
 import Instruments.InstrumentFamily;
 import Instruments.Strings.Guitar;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class GuitarTest {
@@ -13,13 +16,30 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar();
+        guitar = new Guitar(EnumMaterial.WOOD, EnumColor.BROWN, 6);
     }
 
     @Test
     public void hasInstrumentFamily(){
-        Assert.assertEquals(InstrumentFamily.STRINGS, guitar.getInstrumentFamily());
+        assertEquals(InstrumentFamily.STRINGS, guitar.getInstrumentFamily());
     }
+
+    @Test
+    public void hasMaterial(){
+        assertEquals(EnumMaterial.WOOD, guitar.getMaterial());
+    }
+
+    @Test
+    public void hasColor(){
+        assertEquals(EnumColor.BROWN, guitar.getColor());
+    }
+
+    @Test
+    public void hasStrings(){
+        assertEquals(6, guitar.getStringsCount());
+    }
+
+
 
 
 

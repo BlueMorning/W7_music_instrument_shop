@@ -13,7 +13,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        trumpet     = new Trumpet();
+        trumpet = new Trumpet(EnumMaterial.METAL, EnumColor.YELLOW, 5);
 
     }
 
