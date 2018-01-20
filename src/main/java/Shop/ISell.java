@@ -8,5 +8,6 @@ public interface ISell {
     Double getBuyingPrice();
     Double getSellingPrice();
     String getDescription();
+    int getStockLevel();
 
 }

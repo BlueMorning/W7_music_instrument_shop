@@ -19,7 +19,7 @@ public class InstrumentToSaleTest {
     public void before(){
         piano            = new Piano(EnumMaterial.WOOD, EnumColor.BROWN, 88);
         instrumentToSale = new InstrumentToSale(
-                piano, 1000.0, 3000.0);
+                piano, 1000.0, 3000.0, 50);
     }
 
 
@@ -54,6 +54,11 @@ public class InstrumentToSaleTest {
                              "Made of : WOOD, " +
                              "Main color : BROWN";
         assertEquals(description, instrumentToSale.getDescription());
+    }
+
+    @Test
+    public void hasStockLevel(){
+        assertEquals(50, instrumentToSale.getStockLevel());
     }
 
 
