@@ -2,7 +2,7 @@ package Instruments.WoodWind;
 
 import Instruments.EnumColor;
 import Instruments.EnumMaterial;
-import Instruments.InstrumentFamily;
+import Instruments.EnumInstrumentFamily;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class FluteTest {
 
     @Test
     public void hasInstrumentFamily(){
-        Assert.assertEquals(InstrumentFamily.WOODWIND, flute.getInstrumentFamily());
+        Assert.assertEquals(EnumInstrumentFamily.WOODWIND, flute.getInstrumentFamily());
     }
 
     @Test

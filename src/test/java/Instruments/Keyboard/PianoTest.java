@@ -1,8 +1,9 @@
 package Instruments.Keyboard;
 
 import Instruments.EnumColor;
+import Instruments.EnumInstrumentType;
 import Instruments.EnumMaterial;
-import Instruments.InstrumentFamily;
+import Instruments.EnumInstrumentFamily;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,12 @@ public class PianoTest {
 
     @Test
     public void hasInstrumentFamily(){
-        Assert.assertEquals(InstrumentFamily.KEYBOARD, piano.getInstrumentFamily());
+        Assert.assertEquals(EnumInstrumentFamily.KEYBOARD, piano.getInstrumentFamily());
+    }
+
+    @Test
+    public void hasInstrumentType(){
+        assertEquals(EnumInstrumentType.PIANO, piano.getInstrumentType());
     }
 
     @Test

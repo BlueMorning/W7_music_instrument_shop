@@ -1,17 +1,15 @@
 package Instruments.Keyboard;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Synthesizer extends Instrument {
 
     private int instrumentPLayModesCount;
 
     public Synthesizer(EnumMaterial material, EnumColor color, int instrumentPLayModesCount) {
-        super(InstrumentFamily.KEYBOARD, material, color);
+        super(EnumInstrumentFamily.KEYBOARD, material, color);
         this.instrumentPLayModesCount = instrumentPLayModesCount;
+        this.instrumentType = EnumInstrumentType.SYNTHESIZER;
     }
 
     public int getInstrumentPLayModesCount() {

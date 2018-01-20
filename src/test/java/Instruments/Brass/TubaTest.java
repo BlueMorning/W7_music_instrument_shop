@@ -1,8 +1,9 @@
 package Instruments.Brass;
 
 import Instruments.EnumColor;
+import Instruments.EnumInstrumentType;
 import Instruments.EnumMaterial;
-import Instruments.InstrumentFamily;
+import Instruments.EnumInstrumentFamily;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,12 @@ public class TubaTest {
 
     @Test
     public void hasInstrumentFamily(){
-        assertEquals(InstrumentFamily.BRASS, tuba.getInstrumentFamily());
+        assertEquals(EnumInstrumentFamily.BRASS, tuba.getInstrumentFamily());
+    }
+
+    @Test
+    public void hasInstrumentType(){
+        assertEquals(EnumInstrumentType.TUBA, tuba.getInstrumentType());
     }
 
     @Test

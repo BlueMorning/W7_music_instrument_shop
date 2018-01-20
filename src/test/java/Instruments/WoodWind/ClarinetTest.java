@@ -2,7 +2,7 @@
 
 import Instruments.EnumColor;
 import Instruments.EnumMaterial;
-import Instruments.InstrumentFamily;
+import Instruments.EnumInstrumentFamily;
 import Instruments.WoodWind.Clarinet;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,7 +22,7 @@ public class ClarinetTest {
 
     @Test
     public void hasInstrumentFamily(){
-        Assert.assertEquals(InstrumentFamily.WOODWIND, clarinet.getInstrumentFamily());
+        Assert.assertEquals(EnumInstrumentFamily.WOODWIND, clarinet.getInstrumentFamily());
     }
 
     @Test

@@ -1,17 +1,15 @@
 package Instruments.Brass;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Tuba extends Instrument {
 
     private int weight;
 
     public Tuba(EnumMaterial material, EnumColor color, int weight) {
-        super(InstrumentFamily.BRASS, material, color);
-        this.weight = weight;
+        super(EnumInstrumentFamily.BRASS, material, color);
+        this.weight         = weight;
+        this.instrumentType = EnumInstrumentType.TUBA;
     }
 
     @Override

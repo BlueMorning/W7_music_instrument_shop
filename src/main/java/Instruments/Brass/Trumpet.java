@@ -1,9 +1,6 @@
 package Instruments.Brass;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Trumpet extends Instrument {
 
@@ -11,8 +8,9 @@ public class Trumpet extends Instrument {
     private int valvesCount;
 
     public Trumpet(EnumMaterial material, EnumColor color, int valvesCount) {
-        super(InstrumentFamily.BRASS, material, color);
-        this.valvesCount = valvesCount;
+        super(EnumInstrumentFamily.BRASS, material, color);
+        this.valvesCount    = valvesCount;
+        this.instrumentType = EnumInstrumentType.TRUMPET;
     }
 
     public int getValvesCount() {

@@ -1,6 +1,6 @@
 package Instruments;
 
-public enum InstrumentFamily {
+public enum EnumInstrumentFamily {
 
     STRINGS,
     KEYBOARD,

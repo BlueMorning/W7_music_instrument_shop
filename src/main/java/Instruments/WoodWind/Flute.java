@@ -1,17 +1,15 @@
 package Instruments.WoodWind;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Flute extends Instrument {
 
     private boolean transverse;
 
     public Flute(EnumMaterial material, EnumColor color, Boolean transverse) {
-        super(InstrumentFamily.WOODWIND, material, color);
-        this.transverse = transverse;
+        super(EnumInstrumentFamily.WOODWIND, material, color);
+        this.transverse     = transverse;
+        this.instrumentType = EnumInstrumentType.FLUTE;
     }
 
     public boolean isTransverse() {

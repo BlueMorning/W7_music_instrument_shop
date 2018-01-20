@@ -19,7 +19,7 @@ public class InstrumentTest {
 
     @Test
     public void hasInstrumentFamily(){
-        assertEquals(InstrumentFamily.BRASS, trumpet.getInstrumentFamily());
+        assertEquals(EnumInstrumentFamily.BRASS, trumpet.getInstrumentFamily());
     }
 
 

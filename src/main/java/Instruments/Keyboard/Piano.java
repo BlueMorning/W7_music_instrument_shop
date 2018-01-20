@@ -1,17 +1,15 @@
 package Instruments.Keyboard;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Piano extends Instrument {
 
     private int keysCount;
 
     public Piano(EnumMaterial material, EnumColor color, int keysCount) {
-        super(InstrumentFamily.KEYBOARD, material, color);
-        this.keysCount = keysCount;
+        super(EnumInstrumentFamily.KEYBOARD, material, color);
+        this.keysCount      = keysCount;
+        this.instrumentType = EnumInstrumentType.PIANO;
     }
 
     public int getKeysCount() {

@@ -3,17 +3,20 @@ package Instruments;
 
 public abstract class Instrument implements IPlayable {
 
-    protected InstrumentFamily instrumentFamily;
+    protected EnumInstrumentFamily instrumentFamily;
     protected EnumMaterial material;
     protected EnumColor color;
+    protected EnumInstrumentType instrumentType;
 
-    public Instrument(InstrumentFamily instrumentFamily, EnumMaterial material, EnumColor color){
-        this.instrumentFamily = instrumentFamily;
+    public Instrument(EnumInstrumentFamily enumInstrumentFamily,
+                      EnumMaterial material,
+                      EnumColor color){
+        this.instrumentFamily = enumInstrumentFamily;
         this.material         = material;
         this.color            = color;
     }
 
-    public InstrumentFamily getInstrumentFamily(){
+    public EnumInstrumentFamily getInstrumentFamily(){
         return this.instrumentFamily;
     }
 
@@ -23,6 +26,15 @@ public abstract class Instrument implements IPlayable {
 
     public EnumColor getColor(){
         return this.color;
+    }
+
+    public EnumInstrumentType getInstrumentType(){
+        return this.instrumentType;
+    }
+
+    @Override
+    public String play() {
+        return null;
     }
 
 }

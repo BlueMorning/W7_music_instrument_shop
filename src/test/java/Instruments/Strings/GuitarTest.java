@@ -1,8 +1,9 @@
 
 
 import Instruments.EnumColor;
+import Instruments.EnumInstrumentType;
 import Instruments.EnumMaterial;
-import Instruments.InstrumentFamily;
+import Instruments.EnumInstrumentFamily;
 import Instruments.Strings.Guitar;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,12 @@ public class GuitarTest {
 
     @Test
     public void hasInstrumentFamily(){
-        assertEquals(InstrumentFamily.STRINGS, guitar.getInstrumentFamily());
+        assertEquals(EnumInstrumentFamily.STRINGS, guitar.getInstrumentFamily());
+    }
+
+    @Test
+    public void hasInstrumentType(){
+        assertEquals(EnumInstrumentType.GUITAR, guitar.getInstrumentType());
     }
 
     @Test

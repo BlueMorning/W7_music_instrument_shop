@@ -1,17 +1,15 @@
 package Instruments.Strings;
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.Instrument;
-import Instruments.InstrumentFamily;
+import Instruments.*;
 
 public class Guitar extends Instrument {
 
     private  int stringsCount;
 
     public Guitar(EnumMaterial material, EnumColor color, int stringsCount) {
-        super(InstrumentFamily.STRINGS, material, color);
-        this.stringsCount = stringsCount;
+        super(EnumInstrumentFamily.STRINGS, material, color);
+        this.stringsCount   = stringsCount;
+        this.instrumentType = EnumInstrumentType.GUITAR;
     }
 
     @Override
