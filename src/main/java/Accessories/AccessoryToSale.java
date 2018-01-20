@@ -1,30 +1,25 @@
-package Shop.ItemToSell;
+package Accessories;
 
-import Instruments.Instrument;
 import Shop.ISell;
 
-public class InstrumentToSale implements ISell {
+public class AccessoryToSale implements ISell {
 
-    private Instrument instrument;
     private Double buyingPrice;
     private Double sellingPrice;
     private int stockLevel;
+    public String description;
 
+    public AccessoryToSale(String description,
+                           Double buyingPrice,
+                           Double sellingPrice,
+                           int stockLevel){
 
-    public InstrumentToSale(Instrument instrument,
-                            Double buyingPrice,
-                            Double sellingPrice,
-                            int stockLevel){
-
-        this.instrument     = instrument;
+        this.description    = description;
         this.buyingPrice    = buyingPrice;
         this.sellingPrice   = sellingPrice;
         this.stockLevel     = stockLevel;
     }
 
-    public Instrument getInstrument() {
-        return instrument;
-    }
 
     @Override
     public Double calculateMargin() {
@@ -55,12 +50,7 @@ public class InstrumentToSale implements ISell {
 
     @Override
     public String getDescription() {
-        return String.format("Instrument family : %s, " +
-                        "Made of : %s, " +
-                        "Main color : %s",
-                this.instrument.getInstrumentFamily().toString(),
-                this.instrument.getMaterial().toString(),
-                this.instrument.getColor().toString());
+        return this.description;
     }
 
     @Override

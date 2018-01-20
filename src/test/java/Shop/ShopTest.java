@@ -1,5 +1,6 @@
 package Shop;
 
+import Accessories.AccessoryToSale;
 import Instruments.EnumColor;
 import Instruments.EnumMaterial;
 import Instruments.Keyboard.Piano;
@@ -14,15 +15,15 @@ public class ShopTest {
     Shop shop;
     Piano piano;
     ISell pianoToSale;
+    AccessoryToSale accessoryToSale;
 
 
     @Before
     public void Before(){
-        shop = new Shop();
-
+        shop             = new Shop();
         piano            = new Piano(EnumMaterial.WOOD, EnumColor.BROWN, 88);
-        pianoToSale      = new InstrumentToSale(
-                piano, 1000.0, 3000.0, 5);
+        pianoToSale      = new InstrumentToSale(piano, 1000.0, 3000.0, 5);
+        accessoryToSale  = new AccessoryToSale("Drums Sticks", 10.0, 15.0, 3);
     }
 
     @Test
@@ -49,6 +50,13 @@ public class ShopTest {
     public void canCalculatePotentialProfit(){
         shop.addNewItemToSell(pianoToSale);
         assertEquals(10000.0, shop.calculatePotentialProfit(), 0);
+    }
+
+    @Test
+    public void canCalculatePotentialProfit__polymorphism(){
+        shop.addNewItemToSell(pianoToSale);
+        shop.addNewItemToSell(accessoryToSale);
+        assertEquals(10015.0, shop.calculatePotentialProfit(), 0);
     }
 
 
