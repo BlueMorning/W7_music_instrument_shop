@@ -1,9 +1,9 @@
 package Instruments.Brass;
 
-import Instruments.EnumColor;
-import Instruments.EnumInstrumentType;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ public class TrumpetTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet(EnumMaterial.METAL, EnumColor.YELLOW, 5);
+        trumpet = new Trumpet("Trumpet", EnumMaterial.METAL, EnumColor.YELLOW, 50.0, 200.0, 6, 6);
     }
 
 
@@ -41,6 +41,6 @@ public class TrumpetTest {
 
     @Test
     public void hasValves(){
-        assertEquals(5, trumpet.getValvesCount());
+        assertEquals(6, trumpet.getValvesCount());
     }
 }

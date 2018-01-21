@@ -1,9 +1,9 @@
 package Instruments.Keyboard;
 
-import Instruments.EnumColor;
-import Instruments.EnumInstrumentType;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano(EnumMaterial.WOOD, EnumColor.BROWN, 88);
+        piano = new Piano("Piano", EnumMaterial.WOOD, EnumColor.BROWN, 100.0, 400.0, 10, 88);
     }
 
 

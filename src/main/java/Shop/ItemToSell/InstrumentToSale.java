@@ -3,27 +3,28 @@ package Shop.ItemToSell;
 import Instruments.Instrument;
 import Shop.ISell;
 
-public class InstrumentToSale implements ISell {
+public abstract class InstrumentToSale implements ISell {
 
-    private Instrument instrument;
+    private String name;
     private Double buyingPrice;
     private Double sellingPrice;
     private int stockLevel;
 
 
-    public InstrumentToSale(Instrument instrument,
+
+    public InstrumentToSale(String name,
                             Double buyingPrice,
                             Double sellingPrice,
                             int stockLevel){
 
-        this.instrument     = instrument;
+        this.name           = name;
         this.buyingPrice    = buyingPrice;
         this.sellingPrice   = sellingPrice;
         this.stockLevel     = stockLevel;
     }
 
-    public Instrument getInstrument() {
-        return instrument;
+    public String getName(){
+        return this.name;
     }
 
     @Override
@@ -50,17 +51,6 @@ public class InstrumentToSale implements ISell {
     @Override
     public Double getSellingPrice() {
         return this.sellingPrice;
-    }
-
-
-    @Override
-    public String getDescription() {
-        return String.format("Instrument family : %s, " +
-                        "Made of : %s, " +
-                        "Main color : %s",
-                this.instrument.getInstrumentFamily().toString(),
-                this.instrument.getMaterial().toString(),
-                this.instrument.getColor().toString());
     }
 
     @Override

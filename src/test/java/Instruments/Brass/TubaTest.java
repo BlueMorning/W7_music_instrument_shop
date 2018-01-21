@@ -1,9 +1,9 @@
 package Instruments.Brass;
 
-import Instruments.EnumColor;
-import Instruments.EnumInstrumentType;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ public class TubaTest {
 
     @Before
     public void before(){
-        tuba = new Tuba(EnumMaterial.METAL, EnumColor.YELLOW, 10);
+        tuba = new Tuba("Tuba", EnumMaterial.METAL, EnumColor.YELLOW, 100.0, 300.0, 5, 5);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class TubaTest {
 
     @Test
     public void hasWeight(){
-        assertEquals(10, tuba.getWeight());
+        assertEquals(5, tuba.getWeight());
     }
 
 

@@ -1,8 +1,8 @@
 
 
-import Instruments.EnumColor;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import Instruments.WoodWind.Clarinet;
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,7 +17,13 @@ public class ClarinetTest {
 
     @Before
     public void before(){
-        clarinet = new Clarinet(EnumMaterial.METAL, EnumColor.BLACK, 10);
+        clarinet = new Clarinet("Clarinet",
+                                EnumMaterial.METAL,
+                                EnumColor.BLACK,
+                                10.0,
+                                50.0,
+                                150,
+                                10);
     }
 
     @Test

@@ -1,9 +1,9 @@
 
 
-import Instruments.EnumColor;
-import Instruments.EnumInstrumentType;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import Instruments.Strings.Guitar;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(EnumMaterial.WOOD, EnumColor.BROWN, 6);
+        guitar = new Guitar("Guitar", EnumMaterial.WOOD, EnumColor.BROWN, 200.0, 400.0, 12, 6);
     }
 
     @Test

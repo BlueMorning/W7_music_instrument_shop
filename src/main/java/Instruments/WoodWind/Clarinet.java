@@ -1,15 +1,25 @@
 package Instruments.WoodWind;
 
 import Instruments.*;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
 
 public class Clarinet extends Instrument {
 
     private int holesCount;
 
-    public Clarinet(EnumMaterial material, EnumColor color, int holesCount) {
-        super(EnumInstrumentFamily.WOODWIND, material, color);
-        this.holesCount     = holesCount;
-        this.instrumentType = EnumInstrumentType.CLARINET;
+    public Clarinet(   String name,
+                       EnumMaterial material,
+                       EnumColor color,
+                       Double buyingPrice,
+                       Double sellingPrice,
+                       int stockLevel,
+                       int holesCount) {
+        super(name, EnumInstrumentFamily.WOODWIND, material, color, buyingPrice, sellingPrice, stockLevel);
+        this.holesCount        = holesCount;
+        this.instrumentType    = EnumInstrumentType.FLUTE;
     }
 
     public int getHolesCount() {

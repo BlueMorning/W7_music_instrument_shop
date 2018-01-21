@@ -2,6 +2,9 @@ package Instruments;
 
 
 import Instruments.Brass.Trumpet;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumMaterial;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +16,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        trumpet = new Trumpet(EnumMaterial.METAL, EnumColor.YELLOW, 5);
+        trumpet = new Trumpet("Trumpet", EnumMaterial.METAL, EnumColor.YELLOW, 100.0, 200.0, 5, 6);
 
     }
 

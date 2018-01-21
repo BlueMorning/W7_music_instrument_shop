@@ -1,16 +1,27 @@
 package Instruments;
 
 
-public abstract class Instrument implements IPlayable {
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Shop.ItemToSell.InstrumentToSale;
+
+public abstract class Instrument extends InstrumentToSale implements IPlayable {
 
     protected EnumInstrumentFamily instrumentFamily;
     protected EnumMaterial material;
     protected EnumColor color;
     protected EnumInstrumentType instrumentType;
 
-    public Instrument(EnumInstrumentFamily enumInstrumentFamily,
-                      EnumMaterial material,
-                      EnumColor color){
+    public Instrument(  String name,
+                        EnumInstrumentFamily enumInstrumentFamily,
+                        EnumMaterial material,
+                        EnumColor color,
+                        Double buyingPrice,
+                        Double sellingPrice,
+                        int stockLevel){
+        super(name, buyingPrice, sellingPrice, stockLevel);
         this.instrumentFamily = enumInstrumentFamily;
         this.material         = material;
         this.color            = color;
@@ -33,8 +44,14 @@ public abstract class Instrument implements IPlayable {
     }
 
     @Override
-    public String play() {
-        return null;
+    public String getDescription() {
+
+        return String.format("Instrument family : %s, " +
+                        "Made of : %s, " +
+                        "Main color : %s",
+                this.getInstrumentFamily().toString(),
+                this.getMaterial().toString(),
+                this.getColor().toString());
     }
 
 }

@@ -1,9 +1,9 @@
 package Instruments.Keyboard;
 
-import Instruments.EnumColor;
-import Instruments.EnumInstrumentType;
-import Instruments.EnumMaterial;
-import Instruments.EnumInstrumentFamily;
+import Instruments.Enumerations.EnumColor;
+import Instruments.Enumerations.EnumInstrumentType;
+import Instruments.Enumerations.EnumMaterial;
+import Instruments.Enumerations.EnumInstrumentFamily;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,13 @@ public class SynthesizerTest {
 
     @Before
     public void before(){
-        synthesizer = new Synthesizer(EnumMaterial.PLASTIC, EnumColor.BLACK, 20);
+        synthesizer = new Synthesizer("Synthesizer",
+                                        EnumMaterial.PLASTIC,
+                                        EnumColor.BLACK,
+                                        10.0,
+                                        50.0,
+                                        150,
+                                        20);
     }
 
     @Test
